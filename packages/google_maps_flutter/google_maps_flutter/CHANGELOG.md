@@ -1,3 +1,7 @@
+## 1.0.11
+
+* Fix iOS crash on `EXC_BAD_ACCESS KERN_PROTECTION_FAILURE` if the map frame changes long after creation.
+
 ## 1.0.10
 
 * Update the example app: remove the deprecated `RaisedButton` and `FlatButton` widgets.
