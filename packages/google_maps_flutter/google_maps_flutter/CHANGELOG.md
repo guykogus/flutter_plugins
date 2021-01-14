@@ -1,6 +1,14 @@
-## 1.0.11
+## 1.1.2
 
 * Fix iOS crash on `EXC_BAD_ACCESS KERN_PROTECTION_FAILURE` if the map frame changes long after creation.
+
+## 1.1.1
+
+* Fix in example app to properly place polyline at initial camera position.
+
+## 1.1.0
+
+* Add support for holes in Polygons.
 
 ## 1.0.10
 
