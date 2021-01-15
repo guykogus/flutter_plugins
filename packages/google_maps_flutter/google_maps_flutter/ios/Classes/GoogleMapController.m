@@ -50,7 +50,6 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
   FlutterMethodChannel* _channel;
   BOOL _trackCameraPosition;
   NSObject<FlutterPluginRegistrar>* _registrar;
-  BOOL _cameraDidInitialSetup;
   FLTMarkersController* _markersController;
   FLTPolygonsController* _polygonsController;
   FLTPolylinesController* _polylinesController;
@@ -81,7 +80,6 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
     }];
     _mapView.delegate = weakSelf;
     _registrar = registrar;
-    _cameraDidInitialSetup = NO;
     _markersController = [[FLTMarkersController alloc] init:_channel
                                                     mapView:_mapView
                                                   registrar:registrar];
@@ -133,7 +131,6 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
       // zero.
       return;
     }
-    _cameraDidInitialSetup = YES;
     [_mapView removeObserver:self forKeyPath:@"frame"];
     [_mapView moveCamera:[GMSCameraUpdate setCamera:_mapView.camera]];
   } else {
