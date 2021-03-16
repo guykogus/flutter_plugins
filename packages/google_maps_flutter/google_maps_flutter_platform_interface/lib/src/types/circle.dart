@@ -14,7 +14,7 @@ import 'types.dart';
 @immutable
 class CircleId {
   /// Creates an immutable identifier for a [Circle].
-  CircleId(this.value) : assert(value != null);
+  const CircleId(this.value) : assert(value != null);
 
   /// value of the [CircleId].
   final String value;

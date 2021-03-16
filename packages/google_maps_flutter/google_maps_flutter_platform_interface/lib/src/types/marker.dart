@@ -107,7 +107,7 @@ class InfoWindow {
 @immutable
 class MarkerId {
   /// Creates an immutable identifier for a [Marker].
-  MarkerId(this.value) : assert(value != null);
+  const MarkerId(this.value) : assert(value != null);
 
   /// value of the [MarkerId].
   final String value;

@@ -16,7 +16,7 @@ class PolylineId {
   /// Creates an immutable object representing a [PolylineId] among [GoogleMap] polylines.
   ///
   /// An [AssertionError] will be thrown if [value] is null.
-  PolylineId(this.value) : assert(value != null);
+  const PolylineId(this.value) : assert(value != null);
 
   /// value of the [PolylineId].
   final String value;

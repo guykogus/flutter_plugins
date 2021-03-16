@@ -15,7 +15,7 @@ import 'types.dart';
 @immutable
 class PolygonId {
   /// Creates an immutable identifier for a [Polygon].
-  PolygonId(this.value) : assert(value != null);
+  const PolygonId(this.value) : assert(value != null);
 
   /// value of the [PolygonId].
   final String value;
